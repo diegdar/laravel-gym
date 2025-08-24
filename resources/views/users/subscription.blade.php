@@ -16,14 +16,33 @@
     <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6">
         <p class="mt-2 flex flex-col sm:flex-row"><strong class="font-bold dark:text-red-300 mr-2">Usuario:</strong> {{ $user->name }}
         </p>
-        <p class="mt-2 flex flex-col sm:flex-row"><strong class="font-bold dark:text-red-300 mr-2">Cuota:</strong>
-            {{ $subscription->fee_translated ?? 'No asignada' }}
-        </p>
         <p class="mt-2 flex flex-col sm:flex-row"><strong class="font-bold dark:text-red-300 mr-2">Fecha de inicio:</strong>
             {{ $subscription->pivot->start_date_formatted ?? 'No asignada' }}
         </p>
         <p class="mt-2 flex flex-col sm:flex-row"><strong class="font-bold dark:text-red-300 mr-2">Fecha de finalización:</strong>
             {{ $subscription->pivot->end_date_formatted ?? 'No asignada' }}
         </p>
+        {{-- TODO: Hacer que se quede todo en la misma linea y terminar de desarrollar el metodo en el controlador --}}
+        <div class="flex flex-col">
+            <p class="mt-2 flex flex-col sm:flex-row"><strong class="font-bold dark:text-red-300 mr-2">Cuota:</strong>
+                {{ $currentSubscription->fee_translated ?? 'No asignada' }}
+            </p>        
+            <strong class="font-bold dark:text-red-300 mr-2">Cambiar por:</strong>
+            <select name="activity_id" id="activity_id"
+                class="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300">
+                <option value="">-Seleccione Suscripción-</option>
+                @foreach ($subscriptions as $subscription)
+                    <option value="{{ $subscription->fee }}">
+                        {{ $subscription->fee_translated }}      
+                    </option>
+                @endforeach 
+            </select>
+            @error('fee')
+                <span class="text-red-500 text-sm
+                    dark:text-red-400">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>        
     </div>
 </x-layouts.app>
