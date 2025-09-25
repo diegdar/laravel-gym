@@ -2,15 +2,10 @@
 # LINKS
 [Consulta creacion BD-GEMINI][https://gemini.google.com/app/b0af00bbe67eece1]
 
-# Activities-Schedule
-Hacer que el role Admin tambien pueda ver, crear, editar y eliminar un Activities-schedules.
-
 # Navbar
 introducir link introduccion y arreglar distribucion de todos los links en la vista tablet y pc.
 
 # app-info
-## Intro
-hacer que se vea el color gris para el boton de repo
 ## Roles y permisos
 Hacer que las viñetas se vean en la 2da y 3ra sangria.
 
@@ -37,3 +32,6 @@ hacer que cuando la fecha de end_date pase la fecha de hoy el valor del campo st
 
 # Test 🧪
 - Factorizar tests
+
+# Tests, Rutas, Controladores y Servicios
+- Crear un trait para que contenga las rutas en atributos de clase para mejorar el mantenimiento 

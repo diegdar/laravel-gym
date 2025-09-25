@@ -17,9 +17,10 @@
             {{-- link to repo --}}
             <div class="text-center m-4">
                 <a href="https://github.com/diegdar/olympus-gym"
-                    {{-- class="btn btn-dark btn-github btn-lg" target="_blank"> --}}
-                    class="inline-block px-6 py-3 text-lg font-semibold text-white bg-black-500 hover:bg-grey-900 rounded-lg" target="_blank">
-                    <i class="fab fa-github fa-xl"></i> Ver repositorio
+                    class="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition duration-150 ease-in-out dark:bg-gray-800 dark:hover:bg-gray-600"
+                    target="_blank">
+                    Ver repositorio
+                    <i class="fa-brands fa-github fa-lg ml-3" style="color: #eef6ff;"></i>
                 </a>
             </div>
 
@@ -46,7 +47,7 @@
                         <ul class="list-square pl-6 mt-2"> 
                             <li>Puede:
                                 <ul class="list-circle pl-6">
-                                    <li>Ver, crear, editar y eliminar: usuarios, Roles, Salas y Actividades.</li>
+                                    <li>Ver, crear, editar y eliminar: usuarios, Roles.</li>
                                     <li>Ver estadísticas de las suscripciones y descargar reportes.</li>
                                 </ul>
                             </li>
@@ -54,6 +55,7 @@
                                 <ul class="list-circle pl-6">
                                     <li>Gestionar la suscripción de un usuario ageno al suyo.</li>
                                     <li>gestionar el perfil de un usuario ageno al suyo.</li>
+                                    <li>Ver, crear, editar y eliminar: salas y actividades, ademas de horarios para las actividades.</li>
                                 </ul>
                             </li>
                         </ul>
